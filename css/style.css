@@ -7,19 +7,27 @@ Dark green: #28b485
 
 */
 
-* {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: inherit;
+}
+
+html {
+  /* set size to 10px, technique widely used in the css community */
+  font-size: 62.5%; 
 }
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
-  padding: 30px;
+  padding: 3rem;
+  box-sizing: border-box;
 }
 
 .header {
@@ -39,12 +47,12 @@ body {
 .logo-box {
   position: absolute;
   /* we start TRBL counting from the parent if it has position relative*/
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 /* central position a div */
@@ -60,15 +68,15 @@ body {
   color: #fff;
   text-transform: uppercase;
   backface-visibility: hidden;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
 .heading-primary-main {
   /* block elements take all available width and insert line breaks */
   display: block;
-  font-size: 60px;
+  font-size: 5rem;
   font-weight: 400;
-  letter-spacing: 35px;
+  letter-spacing: 3.5rem;
 
   animation-name: moveInRight;
   animation-duration: 1s;
@@ -81,20 +89,20 @@ body {
 
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 17.4px;
+  letter-spacing: 1.75rem;
   animation: moveInRight 1s ease-in;
 }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
   }
 
   80% {
-    transform: translate(10px);
+    transform: translate(1rem);
   }
 
   100% {
@@ -106,11 +114,11 @@ body {
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
   }
 
   80% {
-    transform: translate(-10px);
+    transform: translate(-1rem);
   }
 
   100% {
@@ -122,12 +130,12 @@ body {
 @keyframes moveInBottom {
   0% {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(2rem);
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0rem);
   }
 }
 
@@ -136,22 +144,23 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   display: inline-block;
-  border-radius: 100px;
+  border-radius: 10rem;
   transition: all .2s;
   position: relative;
+  font-size: 1.6rem;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
 
 .btn:active {
-  transform: translateY(-1px);
+  transform: translateY(-.1rem);
   /* make the shadow smaller after the click */
-  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  box-shadow: 0 0.5rem 1rem rgba(0,0,0,.2);
 
 }
 
