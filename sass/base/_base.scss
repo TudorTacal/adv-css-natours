@@ -1,0 +1,18 @@
+// partial sass file
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* set size to 10px, technique widely used in the css community */
+  // defines what 1 rem is
+  font-size: 62.5%; 
+}
+
+body {
+  box-sizing: border-box;
+}
