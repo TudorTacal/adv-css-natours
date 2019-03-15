@@ -1,5 +1,6 @@
+// it's a normal practice to have !important in the utilities classes
 .u-center-text {
-  text-align: center;
+  text-align: center !important; 
 }
 
 .u-margin-bottom-big { 

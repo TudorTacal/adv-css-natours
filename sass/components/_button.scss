@@ -1,5 +1,6 @@
 /* pseudo class style elements under special conditions*/
 .btn {
+  &, // just button
   &:link,
   &:visited {
     text-transform: uppercase;
@@ -10,6 +11,10 @@
     transition: all .2s;
     position: relative;
     font-size: $default-font-size;
+
+    // change the button element
+    border: none;
+    cursor: pointer;
   }
   
   &:hover {
@@ -22,7 +27,8 @@
     }
   }
   
-  &:active {
+  &:active,
+  &:focus {
     transform: translateY(-.1rem);
     /* make the shadow smaller after the click */
     box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
@@ -88,7 +94,8 @@
     transform: translateY(-2px);
   }
 
-  &:active {
+  &:active,
+  &:focus {
     box-shadow: 0 1rem 1rem rgba($color-black, .2);
     transform: translateY(0px);
   }
