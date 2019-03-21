@@ -11,6 +11,18 @@ html {
   /* set size to 10px, technique widely used in the css community */
   // defines what 1 rem is
   font-size: 62.5%; 
+  
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-screen) {
+    font-size: 75%;
+  }
 }
 
 body {
