@@ -26,10 +26,13 @@
   - tab-port
   - tab-land
   - big-desktop
+
+  ORDER: Base + typography > general layout + grid > page layout > components
+
+  ems are the best options for media queries
+  1em = 16px
 */
 
-// ems are the best options for media queries
-// 1em = 16px
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
     @media (max-width: 37.5em) { @content }; // 600px
