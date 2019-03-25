@@ -1,16 +1,27 @@
 .header {
   /* at every point the height should be 95 % of the viewport height */
-  height: 95vh; 
+  height: 95vh;
   background-image: linear-gradient(
-    to right bottom,
-   rgba($color-primary-light, 0.803),
-   rgba($color-primary-dark, 0.803)),
+      to right bottom,
+      rgba($color-primary-light, 0.803),
+      rgba($color-primary-dark, 0.803)
+    ),
     url(../img/hero-small.jpg);
   background-size: cover;
   background-position: top;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
+
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    // dotsperinch
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-secondary-light, 0.803),
+        rgba($color-primary-dark, 0.803)
+      ),
+      url(../img/hero.jpg);
+  }
 
   @include respond(phone) {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
@@ -27,7 +38,7 @@
   &__logo {
     height: 3.5rem;
   }
-  
+
   /* central position a div */
   &__text-box {
     position: absolute;
